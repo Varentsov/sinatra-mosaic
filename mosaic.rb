@@ -10,6 +10,16 @@ end
 # Scan images dir for new images
 #Mosaic.main_work("", true, "path to images directory", false)
 
+# Initializing
+
+if !Dir.exist?("uploads")
+  Dir.mkdir("uploads")
+end
+if !Dir.exist?("results")
+  Dir.mkdir("results")
+end
+
+
 configure do
   set :port, 3000
   set :bind, '0.0.0.0'
